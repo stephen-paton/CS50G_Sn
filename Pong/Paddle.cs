@@ -43,7 +43,7 @@ namespace Pong
 
         public void Update(float dt)
         {
-            if (dy < 0) 
+            if (dy < 0)
             {
                 y = Math.Max(0, y + (dy * dt));
             }

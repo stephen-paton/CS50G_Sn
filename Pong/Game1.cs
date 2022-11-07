@@ -11,7 +11,7 @@ namespace Pong
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        
+
         private RenderTarget2D renderTarget;
 
         private Texture2D colorTexture;
@@ -88,7 +88,7 @@ namespace Pong
 
             paddleHitSfx = Content.Load<SoundEffect>("Sounds/PaddleHit");
             scoreSfx = Content.Load<SoundEffect>("Sounds/Score");
-            wallHitSfx = Content.Load < SoundEffect>("Sounds/WallHit");
+            wallHitSfx = Content.Load<SoundEffect>("Sounds/WallHit");
 
             Debug.Initialize(menuFont);
         }
@@ -185,7 +185,7 @@ namespace Pong
                 }
 
                 // Scoring
-                if (ball.X < - ball.Width)
+                if (ball.X < -ball.Width)
                 {
                     player2Score += 1;
                     ball.Reset(servingPlayer);
@@ -205,7 +205,7 @@ namespace Pong
                         gameState = GameState.Serve;
                     }
 
-                    
+
                 }
                 else if (ball.X > Globals.VIRTUAL_WIDTH)
                 {
@@ -240,7 +240,8 @@ namespace Pong
             else if (kState.IsKeyDown(Keys.S))
             {
                 player1.MoveDown();
-            } else
+            }
+            else
             {
                 player1.Stop();
             }
@@ -252,7 +253,8 @@ namespace Pong
             else if (kState.IsKeyDown(Keys.Down))
             {
                 player2.MoveDown();
-            } else
+            }
+            else
             {
                 player2.Stop();
             }
@@ -260,7 +262,7 @@ namespace Pong
             // Update Paddles
             player1.Update(dt);
             player2.Update(dt);
-               
+
             lastKState = kState;
 
             base.Update(gameTime);

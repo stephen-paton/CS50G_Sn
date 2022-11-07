@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Pong
 {
@@ -66,7 +66,7 @@ namespace Pong
         public bool Collides(Paddle paddle)
         {
             bool collides = false;
-            
+
             if (
                 (x < (paddle.X + paddle.Width)) &&
                 (paddle.X < (x + width)) &&
